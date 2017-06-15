@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Word Scramble</title>
+</head>
+<body>
+    <h1>A JavaScript Word Scramble Game</h1>
+
+    <script>
+        var WORDS     = ["katey", "booradley", "avocado", "dalton"];
+        var SCRAMBLED = ["atyek", "radbooyel", "vodocaa", "lanotd"];
+
+        var playing = true;
+
+        while (playing) {
+
+            // Grab a random word from the WORDS array.
+            //index the array WORDS to use math.random
+            var randomIndex = Math.floor(Math.random() * WORDS.length);
+            var randomWord = WORDS[randomIndex];
+             // Grab the corresponding scrambled word from the SCRAMBLED array.
+            var scrambledWord = SCRAMBLED[randomIndex];
+            // Prompt the user to guess the original word when given the scrambled word.
+             var guess = prompt("Guess the word!: " + scrambledWord);
+             // if the user's guess is equal to the random word alert them they win
+            if (guess === randomWord) {
+                alert("Yay! The word was " + randomWord);
+            }
+            // if the user's guess is not equal to the random word, print wrong
+            else {
+                alert("Wrong! The word was: " + randomWord);
+            }
+            //choice to continue or quit, this possibly ends the while loop
+            playing = confirm("Press OK to keep playing or Cancel to quit.");
+        }
+
+        alert("Goodbye!");
+    </script>
+
+</body>
+</html>
