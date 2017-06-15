@@ -23,7 +23,7 @@
             // Prompt the user to guess the original word when given the scrambled word.
              var guess = prompt("Guess the word!: " + scrambledWord);
              // if the user's guess is equal to the random word alert them they win
-            if (guess === randomWord) {
+            if (guess.trim() === randomWord) {
                 alert("Yay! The word was " + randomWord);
             }
             // if the user's guess is not equal to the random word, print wrong
